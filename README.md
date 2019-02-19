@@ -1,5 +1,7 @@
 # Node Modules Check
 
+**⚠️ In progress**
+
 ## Description
 
 This script looks up your package.json and tells you if there are any outdated packages. In case of outdated packages the script returns an exit code 1, otherwise 0. It uses `npm outdated --json` under the hood.
