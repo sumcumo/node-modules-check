@@ -1,7 +1,5 @@
 # Node Modules Check
 
-**⚠️ In progress**
-
 ## Description
 
 This script looks up your package.json and tells you if there are any outdated packages. In case of outdated packages the script returns an exit code 1, otherwise 0. It uses `npm outdated --json` under the hood.
@@ -16,6 +14,8 @@ This script looks up your package.json and tells you if there are any outdated p
 ![output](./docs/images/output.png)
 
 ## Installation
+
+**⚠️ The npm module is currently being set up.**
 
 ```bash
 npm install --save-dev @sum.cumo/node-modules-check
@@ -54,7 +54,7 @@ or by placing a file named `.check-node-modules.config.json` in your projects fo
 
 ### Purpose example: GitLab CI
 
-At sum.cumo we run this check in [scheduled pipeline in our GitLab CI](https://docs.gitlab.com/ee/user/project/pipelines/schedules.html) in order to check for outdated node modules regularly and automatically.
+At sum.cumo we run this check in a [scheduled pipeline in GitLab CI](https://docs.gitlab.com/ee/user/project/pipelines/schedules.html) in order to check for outdated node modules regularly and automatically.
 
 ### Dev workflow
 
