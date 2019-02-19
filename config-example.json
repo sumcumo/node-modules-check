@@ -1,0 +1,8 @@
+{
+  "ignore": [
+    "lint"
+  ],
+  "ignoreRegex": [
+    "([a-z])."
+  ]
+}

@@ -1,0 +1,7 @@
+.eslintcache
+node_modules/
+.eslintrc
+.gitignore
+.eslintignore
+commitlint.config.js
+config-example.json
