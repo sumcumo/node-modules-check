@@ -9,13 +9,12 @@ This script looks up your package.json and tells you if there are any outdated p
 * ignore specific packages to be marked as outdated
 * sort packages by version difference (major → minor → patch)
 * indicate version difference by color
+* display type of dependency
 * show the `homepage` setting from the package.json of the outdated package
 
 ![output](./docs/images/output.png)
 
 ## Installation
-
-**⚠️ The npm module is currently being set up.**
 
 ```bash
 npm install --save-dev @sum.cumo/node-modules-check
