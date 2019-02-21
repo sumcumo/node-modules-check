@@ -1,7 +1,7 @@
 {
   "name": "@sum.cumo/node-modules-check",
   "version": "2.0.1",
-  "description": "This project checks for outdated node modules in your project",
+  "description": "Check for outdated Node modules in a project",
   "main": "src/index.js",
   "bin": {
     "check-node-modules": "./bin/check.js"
