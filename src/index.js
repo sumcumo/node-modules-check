@@ -106,9 +106,14 @@ module.exports = () => {
 
         if (shownOutdatedModules > 0) {
           const table = new Table()
+          const outdatedModulesWithoutIgnoredModules = []
+
           rows.forEach((row) => {
             const diff = differences[row.moduleKey]
+
             if (diff !== 'ignored') {
+              outdatedModulesWithoutIgnoredModules.push(row.moduleKey)
+
               table.cell(figures.circleFilled, diff2chalk(diff)(figures.circleFilled))
               table.cell('Package', row.moduleKey)
               table.cell('Current', row.currentVersion)
@@ -141,9 +146,12 @@ module.exports = () => {
 
           console.info('')
 
+          const textCommand = `${outdatedModulesWithoutIgnoredModules.join('@latest ')}@latest`
+
           const texts = [
-            `${' '.repeat(3)}If you want to upgrade to the latest version, please run:`,
-            `${' '.repeat(15)}${chalk.bold.magenta('npm install <package>@latest')}`,
+            'If you want to upgrade all packages to the latest version, please run:',
+            `${chalk.bold.magenta(`npm install ${textCommand}`)}`,
+            '',
             'This will update your package.json and install the latest version.',
           ]
           console.info(boxen(texts.join('\n'), {
