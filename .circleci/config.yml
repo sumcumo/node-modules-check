@@ -1,10 +1,6 @@
 version: 2
 jobs:
-  lint:
-    filters:
-      branches:
-        only:
-          - development
+  build:
           
     docker:
       # specify the version you desire here
