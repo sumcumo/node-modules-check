@@ -77,18 +77,9 @@ module.exports = () => {
           })
 
           let diff = semver.diff(currentVersion, latestVersion)
-
-          let matchesIgnore
-          if (options.ignore.length > 0) {
-            options.ignore.forEach((pattern) => {
-              matchesIgnore = moduleKey.match(pattern)
-            })
-          }
-          if (options.ignoreRegex.length > 0) {
-            options.ignoreRegex.forEach((pattern) => {
-              matchesIgnore = moduleKey.match(pattern)
-            })
-          }
+          const { ignore = [], ignoreRegex = [] } = options
+          const matchesIgnore = ignore.includes(moduleKey)
+            || ignoreRegex.some(pattern => moduleKey.match(pattern))
 
           if (matchesIgnore) {
             diff = 'ignored'
