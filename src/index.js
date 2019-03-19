@@ -13,14 +13,12 @@ const configFileArg = argv.config
 let options = {
   ignore: [],
   ignoreRegex: [],
-  ignoreDev: false,
-  ignoreSemver: [],
 }
 
 if (hasConfigFileDefault || configFileArg) {
   const file = configFileArg || configFileDefaultPath
   const data = fs.readFileSync(file, 'utf8')
-  options = { ...options, ...JSON.parse(data) }
+  options = JSON.parse(data)
 }
 
 const sorting = ['major', 'minor', 'patch', 'prerelease', 'premajor', 'preminor']
@@ -79,18 +77,9 @@ module.exports = () => {
           })
 
           let diff = semver.diff(currentVersion, latestVersion)
-          const {
-            ignore = [], ignoreRegex = [],
-            ignoreDev = false, ignoreSemver = [],
-          } = options
-          const ignoreType = []
-          if (ignoreDev) {
-            ignoreType.push('devDependencies')
-          }
+          const { ignore = [], ignoreRegex = [] } = options
           const matchesIgnore = ignore.includes(moduleKey)
             || ignoreRegex.some(pattern => moduleKey.match(pattern))
-            || ignoreType.includes(type)
-            || ignoreSemver.includes(diff)
 
           if (matchesIgnore) {
             diff = 'ignored'
