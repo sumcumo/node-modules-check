@@ -40,7 +40,7 @@ Example:
   "ignoreRegex": [
     "([a-z])." //regex can be used as well
   ],
-  "ignoreDev": ture, // igonre dev dependiencies
+  "ignoreDev": true, // igonre dev dependiencies
   "ignoreSemver": [ // ignore semantic version
     "prerelease"
   ]
