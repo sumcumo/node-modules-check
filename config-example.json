@@ -4,5 +4,11 @@
   ],
   "ignoreRegex": [
     "([a-z])."
+  ],
+  "ignoreDev": true,
+  "ignoreSemver": [
+    "prerelease",
+    "premajor",
+    "preminor"
   ]
 }
