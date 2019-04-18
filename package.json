@@ -44,7 +44,7 @@
     "chalk": "2.4.2",
     "child_process": "1.0.2",
     "easy-table": "1.1.1",
-    "figures": "2.0.0",
+    "figures": "3.0.0",
     "semver": "6.0.0",
     "yargs": "13.2.2"
   }
