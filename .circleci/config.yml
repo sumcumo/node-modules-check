@@ -45,12 +45,12 @@ jobs:
           at: ~/repo
       - run: npm audit
 
-  build:
+  lint:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: npm run build
+      - run: npm run lint
 
 workflows:
   version: 2
