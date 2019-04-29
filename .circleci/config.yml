@@ -53,8 +53,8 @@ jobs:
 
       - run: npm audit
 
-# workflows:
-#   version: 2
+workflows:
+  version: 2
 #   nightly:
 #       triggers:
 #         - schedule:
