@@ -53,15 +53,15 @@ jobs:
 
       - run: npm audit
 
-workflows:
-  version: 2
-  nightly:
-      triggers:
-        - schedule:
-            cron: "0 4 * * 2"
-            filters:
-              branches:
-                only:
-                  - master
-      jobs:
-        - audit
+# workflows:
+#   version: 2
+#   nightly:
+#       triggers:
+#         - schedule:
+#             cron: "0 4 * * 2"
+#             filters:
+#               branches:
+#                 only:
+#                   - master
+#       jobs:
+#         - audit
