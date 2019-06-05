@@ -1,6 +1,17 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [2.1.1](https://github.com/sumcumo/node-modules-check/compare/v2.1.0...v2.1.1) (2019-06-05)
+
+
+### Bug Fixes
+
+* **commitlint:** reference-rule ([52f556f](https://github.com/sumcumo/node-modules-check/commit/52f556f))
+* **typo:** README ([56fddfb](https://github.com/sumcumo/node-modules-check/commit/56fddfb))
+* **typo:** README ([7f704e3](https://github.com/sumcumo/node-modules-check/commit/7f704e3))
+
+
 
 <a name="2.1.0"></a>
 # 2.1.0 (2019-03-19)
