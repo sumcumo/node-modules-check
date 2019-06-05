@@ -12,7 +12,9 @@ This script looks up your package.json and tells you if there are any outdated p
 * display type of dependency
 * show the `homepage` setting from the package.json of the outdated package
 
-![output](./docs/images/output.png)
+<p align="center">
+  <img width="800" src="docs/assets/node-modules-check.svg">
+</p>
 
 ## Installation
 
@@ -61,10 +63,28 @@ At sum.cumo we run this check in a [scheduled pipeline in GitLab CI](https://doc
 
 ### Dev workflow
 
-1. `npm install`
+1. `npm install`  
 1. `./bin/check.js`
 
 This will run the package on itself.
+
+#### SVG creation
+
+##### Dependencies
+
+- [asciinema](https://github.com/asciinema/asciinema)
+- [svg-term-cli](https://github.com/marionebl/svg-term-cli)
+
+##### Commands
+
+1. Create the `.cast` file:  
+    ```bash
+    asciinema rec node-modules-check.cast
+    ```
+1. Create the `.svg` file:  
+    ```bash
+    cat node-modules-check.cast | svg-term-cli --out node-modules-check.svg --profile=Seti --height=30 --width=100 --term iterm2 --window
+    ```
 
 ## License
 
