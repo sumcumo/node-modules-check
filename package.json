@@ -40,7 +40,7 @@
     "standard-version": "6.0.1"
   },
   "dependencies": {
-    "boxen": "4.0.0",
+    "boxen": "4.1.0",
     "chalk": "2.4.2",
     "child_process": "1.0.2",
     "easy-table": "1.1.1",
