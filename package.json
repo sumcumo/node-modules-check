@@ -45,7 +45,7 @@
     "child_process": "1.0.2",
     "easy-table": "1.1.1",
     "figures": "3.0.0",
-    "semver": "6.1.1",
+    "semver": "7.1.1",
     "yargs": "13.2.4"
   }
 }
