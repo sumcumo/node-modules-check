@@ -37,7 +37,7 @@
     "eslint-plugin-import": "2.20.1",
     "husky": "4.2.1",
     "prettier-eslint": "9.0.1",
-    "standard-version": "7.1.0"
+    "standard-version": "8.0.1"
   },
   "dependencies": {
     "boxen": "4.2.0",
