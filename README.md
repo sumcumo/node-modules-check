@@ -1,3 +1,13 @@
+# ARCHIVED
+
+This project has been discontinued.
+
+Please use alternatives like
+
+- `yarn upgrade-interactive --latest` (when using [Yarn](https://yarnpkg.com))
+- https://depfu.com
+- https://github.com/apps/renovate
+
 # Node Modules Check
 
 ## Description
@@ -6,11 +16,11 @@ This script looks up your package.json and tells you if there are any outdated p
 
 ### Features
 
-* ignore specific packages to be marked as outdated
-* sort packages by version difference (major → minor → patch)
-* indicate version difference by color
-* display type of dependency
-* show the `homepage` setting from the package.json of the outdated package
+- ignore specific packages to be marked as outdated
+- sort packages by version difference (major → minor → patch)
+- indicate version difference by color
+- display type of dependency
+- show the `homepage` setting from the package.json of the outdated package
 
 <p align="center">
   <img width="800" src="docs/assets/node-modules-check.svg">
@@ -36,14 +46,13 @@ Example:
 
 ```json
 {
-  "ignore": [
-    "eslint"
-  ],
+  "ignore": ["eslint"],
   "ignoreRegex": [
     "([a-z])." //regex can be used as well
   ],
   "ignoreDev": true, // ignore dev dependencies
-  "ignoreSemver": [ // ignore semantic version
+  "ignoreSemver": [
+    // ignore semantic version
     "prerelease"
   ]
 }
@@ -63,7 +72,7 @@ At sum.cumo we run this check in a [scheduled pipeline in GitLab CI](https://doc
 
 ### Dev workflow
 
-1. `npm install`  
+1. `npm install`
 1. `./bin/check.js`
 
 This will run the package on itself.
@@ -77,14 +86,14 @@ This will run the package on itself.
 
 ##### Commands
 
-1. Create the `.cast` file:  
-    ```bash
-    asciinema rec node-modules-check.cast
-    ```
-1. Create the `.svg` file:  
-    ```bash
-    cat node-modules-check.cast | svg-term-cli --out node-modules-check.svg --profile=Seti --height=30 --width=100 --term iterm2 --window
-    ```
+1. Create the `.cast` file:
+   ```bash
+   asciinema rec node-modules-check.cast
+   ```
+1. Create the `.svg` file:
+   ```bash
+   cat node-modules-check.cast | svg-term-cli --out node-modules-check.svg --profile=Seti --height=30 --width=100 --term iterm2 --window
+   ```
 
 ## License
 
@@ -96,6 +105,6 @@ Licensed under the Apache License, Version 2.0 (the “License”); you may not 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-----
+---
 
 [Learn more about sum.cumo](https://www.sumcumo.com/en) and [work on open source projects](https://www.sumcumo.com/jobs), too!
